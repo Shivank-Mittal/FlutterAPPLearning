@@ -49,9 +49,10 @@ class MyCounterState extends State<MyCounter>
   }
 
   @override
-  // TODO: implement widget
   Widget build(context){
     return MaterialApp(
+      theme: ThemeData(
+        accentColor: Colors.orangeAccent ),
       home:Scaffold(
         appBar: AppBar(
           title: Text('French Counter'),
@@ -64,14 +65,23 @@ class MyCounterState extends State<MyCounter>
 
               children: <Widget>[
                 Text(DefaultText, style: TextStyle(fontSize: 30.0),),
+                Text(counter.toString(), style: TextStyle(fontSize: 30.0),),
                 Padding(padding: EdgeInsets.all(10.0),),
-                RaisedButton(
-                  child: Text('Call Numbers'),
-                  onPressed:displayNumbers ,
-                  color: Colors.orangeAccent,)
+                // RaisedButton(
+                //   child: Text('Call Numbers'),
+                //   onPressed:displayNumbers ,
+                //   color: Colors.orangeAccent,)
               ],
-            ),),
+            ),
+          ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed:displayNumbers ,
+          child: Icon(
+            Icons.add,
+            )
+          ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       )
     );
   }
