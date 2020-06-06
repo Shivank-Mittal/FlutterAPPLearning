@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 
 void main(){
 
-  var app = MaterialApp(
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
     title: 'Flutter Stateless App',
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
@@ -16,12 +22,13 @@ void main(){
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text('First line'),
             Text('Second line'),
             RaisedButton(
               onPressed: (){},
-              child:Text('Login') ,
+              child:Text('SignUp') ,
               color: Colors.orange,
               splashColor: Colors.deepOrangeAccent,)
           ],
@@ -36,5 +43,5 @@ void main(){
     ),
   );
 
-  runApp(app);
+  }
 }
