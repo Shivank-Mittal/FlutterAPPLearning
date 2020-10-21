@@ -1,18 +1,18 @@
-class Gmail{
+class Gmail {
   int _id;
   String _message;
   String _senderEmailID;
 
   Gmail(this._id, this._message, this._senderEmailID);
-  set id(int id){
+  set id(int id) {
     this._id = id;
   }
 
-  set message(String message){
+  set message(String message) {
     this._message = message;
-  } 
+  }
 
-  set senderEmailID( String senderEmailId){
+  set senderEmailID(String senderEmailId) {
     this._senderEmailID = senderEmailId;
   }
 
